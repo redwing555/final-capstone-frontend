@@ -1,11 +1,11 @@
-const ADD_USER = "redux-add-user"
+const ADD_USER = 'redux-add-user';
 
-const initialState = ""
+const initialState = '';
 
 export const addUser = (payload) => ({
   type: ADD_USER,
   payload,
-})
+});
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -14,6 +14,6 @@ const userReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-export default userReducer
+export default userReducer;
