@@ -13,7 +13,7 @@ const Homepage = () => {
     e.preventDefault();
     const name = e.target.name.value;
     dispatch(addUser(name));
-    navigate('/displayItems');
+    navigate('/collection');
   };
   return (
     <>

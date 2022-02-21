@@ -2,12 +2,16 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
+// import { useSelector } from 'react-redux';
 import AuthComponent from './components/AuthComponent';
+import NavPanel from './components/NavPanel';
 
 import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
 
 const App = () => (
+  // const user  = userSelector((state) => state.userReducer)
+
   <Router>
     <Routes>
       <Route path="/" element={<Homepage />} />
@@ -15,6 +19,25 @@ const App = () => (
         path="/addItem"
         element={(
           <AuthComponent>
+            <NavPanel />
+            <DisplayItems />
+          </AuthComponent>
+          )}
+      />
+      <Route
+        path="/reserve"
+        element={(
+          <AuthComponent>
+            <NavPanel />
+            <DisplayItems />
+          </AuthComponent>
+          )}
+      />
+      <Route
+        path="/myReservations"
+        element={(
+          <AuthComponent>
+            <NavPanel />
             <DisplayItems />
           </AuthComponent>
           )}
@@ -23,14 +46,16 @@ const App = () => (
         path="/deleteItem"
         element={(
           <AuthComponent>
+            <NavPanel />
             <DisplayItems />
           </AuthComponent>
           )}
       />
       <Route
-        path="/displayItems"
+        path="/collection"
         element={(
           <AuthComponent>
+            <NavPanel />
             <DisplayItems />
           </AuthComponent>
           )}
@@ -39,6 +64,7 @@ const App = () => (
           path=":id"
           element={(
             <AuthComponent>
+              <NavPanel />
               <DisplayItems />
             </AuthComponent>
               )}

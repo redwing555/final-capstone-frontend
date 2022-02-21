@@ -17,7 +17,7 @@ const AuthComponent = ({ children }) => {
 };
 
 AuthComponent.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  children: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default AuthComponent;
