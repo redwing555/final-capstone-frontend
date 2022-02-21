@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container .sidebar {
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: 200px;
+  z-index: 10;
+  padding-left: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar li {
+  text-align: center;
+  padding: 15px 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-right: 19px;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 30px;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar li:hover {
+  background-color: #99c110;
+  width: 9rem;
+  padding: 20px;
+  text-decoration: white;
+}
+
+.sidebar li:hover .link {
+  color: white;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar li:hover {
+    background-color: #99c110;
+    width: 15rem;
+    padding: 20px;
+    text-decoration: white;
+    transition: all 0.5s;
+  }
+
+  .fa-times {
+    display: block;
+    transition: all 3ms;
+  }
+
+  .logo {
+    transform: scale(0.6);
+    margin-left: 3rem;
+    margin-top: -2rem;
+  }
+
+  .responsive {
+    display: block;
+    z-index: -1;
+    width: 19rem !important;
+    margin-right: 1rem !important;
+    transition: 0.4s ease-in !important;
+  }
+
+  .icon {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+    padding-top: 1rem;
+  }
+
+  .icon .fa {
+    margin: 1rem;
+    transform: scale(2);
+    color: #99c110;
+  }
+}
