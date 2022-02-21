@@ -1,35 +1,51 @@
-import { useSelector } from 'react-redux';
 import {
-  BrowserRouter as Router, Routes, Route, Navigate,
+  BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
+import AuthComponent from './components/AuthComponent';
 
-const App = () => {
-  const user = useSelector((state) => state.userReducer);
+import Homepage from './components/Homepage';
+import DisplayItems from './components/DisplayItems';
 
-  const checkUser = () => {
-    if (user !== '') {
-      return (
-        <>
-          <Route path="/addItem" element="placeholder" />
-          <Route path="/deleteItem" element="placeholder" />
-          <Route path="/displayItem" element="placeholder">
-            <Route path=":id" element="placeholder" />
-          </Route>
-        </>
-      );
-    }
-    return <Route path="*" element={<Navigate to="/" />} />;
-  };
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element="placeholderHome" />
-        {checkUser()}
-      </Routes>
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route
+        path="/addItem"
+        element={(
+          <AuthComponent>
+            <DisplayItems />
+          </AuthComponent>
+          )}
+      />
+      <Route
+        path="/deleteItem"
+        element={(
+          <AuthComponent>
+            <DisplayItems />
+          </AuthComponent>
+          )}
+      />
+      <Route
+        path="/displayItems"
+        element={(
+          <AuthComponent>
+            <DisplayItems />
+          </AuthComponent>
+          )}
+      >
+        <Route
+          path=":id"
+          element={(
+            <AuthComponent>
+              <DisplayItems />
+            </AuthComponent>
+              )}
+        />
+      </Route>
+    </Routes>
+  </Router>
+);
 
 export default App;
