@@ -55,25 +55,6 @@
   padding: 0 20px;
 }
 
-.homepage-container button {
-  height: 40px;
-  align-self: center;
-  border-radius: 20px;
-  border: none;
-  color: rgba(204, 52, 52, 0.69);
-  font-weight: 700;
-  outline: 1px solid rgba(204, 52, 52, 0.69);
-  padding: 0 20px;
-}
-
 .homepage-container button:hover {
-  height: 40px;
-  align-self: center;
-  border-radius: 20px;
-  border: none;
-  color: rgba(204, 52, 52, 0.69);
-  font-weight: 700;
-  outline: 1px solid rgba(204, 52, 52, 0.69);
-  padding: 0 20px;
-  transform: scale(102%);
+  transform: scale(1.02);
 }

@@ -1,20 +1,23 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Homepage from "./Homepage";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const AuthComponent = (props) => {
+const AuthComponent = ({ children }) => {
   const user = useSelector((state) => state.userReducer);
 
   const isLoggedIn = () => {
-    if (user === "") {
-      return false
+    if (user === '') {
+      return false;
     }
-    return true
-  }
+    return true;
+  };
 
-  return isLoggedIn() ? props.children : <Navigate to="/" />;
-}
+  return isLoggedIn() ? children : <Navigate to="/" />;
+};
 
+AuthComponent.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
 
-export default AuthComponent
+export default AuthComponent;

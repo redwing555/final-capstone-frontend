@@ -1,29 +1,20 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { addUser } from "../redux/user/user";
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import {
-  useNavigate
+  useNavigate,
 } from 'react-router-dom';
+import { addUser } from '../redux/user/user';
 import '../assets/styles/Homepage.css';
 
 const Homepage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state) => state.userReducer);
-  const dispatchUsername = (e) => {
-    e.preventDefault()
+  const dispatchUsername = async (e) => {
+    e.preventDefault();
     const name = e.target.name.value;
-    dispatch(addUser(name))
-    console.log(user !== "")
-    checkUser()
-    navigate('/displayItems')
-  }
-  const checkUser = () => {
-    if (user !== "") {
-      navigate('/displayItems')
-    }
-  }
+    dispatch(addUser(name));
+    navigate('/displayItems');
+  };
   return (
     <>
       <section className="homepage-container">
@@ -37,7 +28,7 @@ const Homepage = () => {
         </form>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
