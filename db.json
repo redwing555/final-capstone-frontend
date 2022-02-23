@@ -1,4 +1,75 @@
 {
-    "cars" : [] ,
+    "cars" : [
+        {
+            "id": 1,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://4.bp.blogspot.com/-OIbgn_Ga4R0/VARzAvX7PaI/AAAAAAAAA-Y/xQbZt1CE8B8/s1600/buick.jpg",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 2,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://blog.raleighclassic.com/wp-content/uploads/2016/02/classic_car2.jpg?x32310",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 3,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://media.autoexpress.co.uk/image/private/s--RwJCRJdn--/v1562241025/autoexpress/1/06/ferrari-250-gt-lwb-california-spider-by-scaglietti.jpg",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 4,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://1.bp.blogspot.com/-rio_Ldla1mc/UIDuK81woCI/AAAAAAAALqM/wURH3tqv6P0/s1600/Classic+Cars+Wallpapers+4.jpg",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 5,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://4.bp.blogspot.com/-OIbgn_Ga4R0/VARzAvX7PaI/AAAAAAAAA-Y/xQbZt1CE8B8/s1600/buick.jpg",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 6,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://blog.raleighclassic.com/wp-content/uploads/2016/02/classic_car2.jpg?x32310",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        },
+        {
+            "id": 7,
+            "price": 100,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "image": "https://media.autoexpress.co.uk/image/private/s--RwJCRJdn--/v1562241025/autoexpress/1/06/ferrari-250-gt-lwb-california-spider-by-scaglietti.jpg",
+            "description": "This is the car description",
+            "created_at": "2022-02-23T09:14:23.045Z",
+            "updated_at": "2022-02-23T09:14:23.045Z"
+        }
+    ] ,
     "reservations": []
 }
