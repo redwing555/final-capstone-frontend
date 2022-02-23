@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 4rem;
+  height: 80vh;
+  width: 100%;
+}
+
+.titles > h1 {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.titles > h2 {
+  font-size: 22px;
+  color: lightgray;
+  text-align: center;
+}
+
+.cars-display {
+  display: flex;
+  max-height: 60vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cars-display > .fa {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  width: 50px;
+  color: white;
+  text-align: center;
+}
+
+.cars-display > .fa::after {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 200%;
+  content: "";
+  background: rgb(151, 191, 15);
+  top: -50%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+.cars-display > .fa-caret-right::after {
+  border-radius: 20px 0 0 20px;
+}
+
+.cars-display > .fa-caret-left::after {
+  border-radius: 0 20px 20px 0;
+}
+
+.car-container {
+  display: flex;
+  width: 80%;
+  overflow-x: hidden;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.car {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 96%;
+  margin: 0 2%;
+}
+
+.car > img {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+}
+
+@media screen and (min-width: 960px) {
+  .cars-container {
+    padding-top: 0;
+    padding-left: 200px;
+  }
+
+  .car {
+    min-width: 29.333%;
+  }
+}
