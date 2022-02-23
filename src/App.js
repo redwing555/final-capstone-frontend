@@ -5,7 +5,7 @@ import './App.css';
 // import { useSelector } from 'react-redux';
 import AuthComponent from './components/AuthComponent';
 import NavPanel from './components/NavPanel';
-
+import AddCar from './components/AddCar';
 import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
 
@@ -20,7 +20,7 @@ const App = () => (
         element={(
           <AuthComponent>
             <NavPanel />
-            <DisplayItems />
+            <AddCar />
           </AuthComponent>
           )}
       />
