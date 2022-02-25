@@ -110,5 +110,27 @@
       "id": 12
     }
   ],
-  "reservations": []
+  "reservations": [
+    {
+      "id": 2,
+      "fromDate": "2020/12/20",
+      "toDate": "2021/02/20",
+      "username": "houssam",
+      "car_id": 2
+    },
+    {
+      "id": 4,
+      "fromDate": "2020/12/20",
+      "toDate": "2021/02/20",
+      "username": "houssam",
+      "car_id": 1
+    },
+    {
+      "id": 5,
+      "fromDate": "2020/12/20",
+      "toDate": "2021/02/20",
+      "username": "testuser",
+      "car_id": 2
+    }
+  ]
 }

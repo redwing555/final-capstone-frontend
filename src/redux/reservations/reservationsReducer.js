@@ -1,6 +1,6 @@
 const GET_RESERVATIONS = 'reservations/GET_RESERVATIONS';
 const DELETE_RESERVATION = 'reservations/DELETE_RESERVATIONS';
-const initialState = {};
+const initialState = [];
 
 const getAllReservations = (payload) => ({
   type: GET_RESERVATIONS,
