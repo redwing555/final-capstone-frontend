@@ -47,7 +47,7 @@ const DisplayItems = () => {
                 {' '}
                 {car.model}
               </h3>
-              <p>{car.description}</p>
+              <p>{car.description ? car.description : '‎'}</p>
             </Link>
           ))}
         </div>
