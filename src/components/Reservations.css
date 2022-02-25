@@ -1,0 +1,72 @@
+.reservations-container{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    margin:3rem;
+
+}
+
+.myreservations-title{
+    margin-left: 50rem;
+    padding-top: 5rem;
+}
+
+.reservation-notice{
+    margin-left: 25rem;
+    animation: color-change 1s infinite;
+}
+
+  @keyframes color-change {
+    0% { color: red; }
+    50% { color: black; }
+    100% { color: red; }
+  }
+
+.no-reservations{
+    margin-left: 45rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .myreservations-title{
+        margin-left: 2rem;
+        padding-top: 5rem;
+    }
+    
+    
+
+    .reservation-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reservation-notice{
+        margin-left: 0rem;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        animation: marquee 7s linear infinite;
+        padding-top: 0rem;
+        margin-top: -3rem;
+        color: red;
+    }
+
+    @keyframes marquee {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-100%, 0);
+        }
+      }
+    
+    .reservation-header{
+        height: 10rem;
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import propTypes from 'prop-types';
 import { deleteReservation } from '../redux/reservations/reservationsReducer';
+import './ReservationCard.css';
 
 function ReservationCard(props) {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function ReservationCard(props) {
           {' '}
           your car has been reserved!
         </div>
-        <div>
+        <div className="reserve-id">
           Reservation  ID :
           {uniqueId()}
         </div>
@@ -79,7 +80,7 @@ function ReservationCard(props) {
 
           {reservedCar[0].description && (
           <div>
-            Car brand :
+            description :
             {' '}
             {' '}
             {reservedCar[0].description}
@@ -87,7 +88,7 @@ function ReservationCard(props) {
           )}
 
           <div>
-            Total price ($) :
+            Total rent price ($) :
             {' '}
             {parseInt(reservedCar[0].price, 10)
              * datediff(reservation.fromDate, reservation.toDate)}
