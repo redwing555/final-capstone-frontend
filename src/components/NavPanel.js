@@ -31,6 +31,12 @@ const NavPanel = () => {
 
     {
       id: 4,
+      path: '/deleteItem',
+      text: 'Remove from collection',
+    },
+
+    {
+      id: 5,
       path: '/reserve',
       text: 'Rent car',
     },

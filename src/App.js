@@ -9,6 +9,7 @@ import AddCar from './components/AddCar';
 import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
 import ItemDetails from './components/ItemDetails';
+import RemoveCar from './components/RemoveCar';
 
 const App = () => (
   // const user  = userSelector((state) => state.userReducer)
@@ -48,7 +49,7 @@ const App = () => (
         element={(
           <AuthComponent>
             <NavPanel />
-            <DisplayItems />
+            <RemoveCar />
           </AuthComponent>
           )}
       />
