@@ -8,6 +8,7 @@ import NavPanel from './components/NavPanel';
 import AddCar from './components/AddCar';
 import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
+import ItemDetails from './components/ItemDetails';
 
 const App = () => (
   // const user  = userSelector((state) => state.userReducer)
@@ -59,17 +60,16 @@ const App = () => (
             <DisplayItems />
           </AuthComponent>
           )}
-      >
+      />
         <Route
-          path=":id"
+          path="collection/:id"
           element={(
             <AuthComponent>
               <NavPanel />
-              <DisplayItems />
+              <ItemDetails/>
             </AuthComponent>
               )}
         />
-      </Route>
     </Routes>
   </Router>
 );

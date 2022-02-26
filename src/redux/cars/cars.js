@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const LOAD_CARS = 'redux-load-cars';
 const ADD_CAR = 'cars/ADD_CAR';
-const API_URL = 'http://localhost:3000/';
+const API_URL = 'http://localhost:3000/api/v1/';
 const END_POINT = 'cars';
 
 const initialState = [];

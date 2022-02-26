@@ -1,0 +1,39 @@
+.details-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  height: 80vh;
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;;
+}
+
+@media screen and (min-width: 960px) {
+  .details-container {
+    flex-direction: row;
+    padding-top: 0;
+    padding-left: 200px;
+  }
+
+  .image-container {
+    width: 60%;
+  }
+}
