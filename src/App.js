@@ -62,15 +62,15 @@ const App = () => (
           </AuthComponent>
           )}
       />
-        <Route
-          path="collection/:id"
-          element={(
-            <AuthComponent>
-              <NavPanel />
-              <ItemDetails/>
-            </AuthComponent>
+      <Route
+        path="collection/:id"
+        element={(
+          <AuthComponent>
+            <NavPanel />
+            <ItemDetails />
+          </AuthComponent>
               )}
-        />
+      />
     </Routes>
   </Router>
 );
