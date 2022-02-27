@@ -10,7 +10,9 @@ html, body {
   flex-direction: column;
   gap: 3rem;
   margin-left: 2.5rem;
+  margin-right: 5rem;
   margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
 .myreservations-title {
