@@ -1,8 +1,16 @@
+
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  
+}
 .reservations-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin: 3rem;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
 }
 
 .myreservations-title {
@@ -11,13 +19,14 @@
 }
 
 .reservation-notice {
-  margin-left: 25rem;
+  margin-left: 43rem;
   animation: color-change 1s infinite;
 }
 
+
 @keyframes color-change {
-  0% { color: red; }
-  50% { color: black; }
+  0% { color: red;  }
+  50% { color: black ;}
   100% { color: red; }
 }
 
@@ -28,6 +37,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .reservations-container{
+   scroll-behavior: auto;
+  }
   .myreservations-title {
     margin-left: 2rem;
     padding-top: 5rem;
@@ -39,24 +51,31 @@
   }
 
   .reservation-notice {
-    margin-left: 0;
+    
+    margin-left: -4.5rem;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    animation: marquee 7s linear infinite;
+    animation: marquee 3s linear infinite;
     padding-top: 0;
     margin-top: -3rem;
     color: red;
+    
   }
 
   @keyframes marquee {
     0% {
-      transform: translate(0, 0);
+      transform: translate(10%, 0);
+      transform: scale(0.6); 
     }
 
     100% {
-      transform: translate(-100%, 0);
+      transform: translate(-10%, 0);
+      transform: scale(0.7);
+      
+      
+      
     }
   }
 

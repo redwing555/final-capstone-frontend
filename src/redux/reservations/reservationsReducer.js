@@ -2,15 +2,19 @@ import axios from 'axios';
 
 const GET_RESERVATIONS = 'reservations/GET_RESERVATIONS';
 const DELETE_RESERVATION = 'reservations/DELETE_RESERVATIONS';
-const initialState = [];
+const ADD_RESERVATION = 'reservation/ADD_RESERVATION';
+const API_URL = 'http://localhost:3000/';
+const END_POINT = 'api/v1/reservations';
 
-// const getAllReservations = (payload) => ({
-//   type: GET_RESERVATIONS,
-//   payload,
-// });
+const initialState = [];
 
 export const cancelReservation = (payload) => ({
   type: DELETE_RESERVATION,
+  payload,
+});
+
+const createNewReservation = (payload) => ({
+  type: ADD_RESERVATION,
   payload,
 });
 
@@ -33,12 +37,26 @@ export const getReservations = (user) => async (dispatch) => {
   });
 };
 
+export const createReservation = (payload, user) => async (dispatch) => {
+  const request = await fetch(`${API_URL + END_POINT}?username=${user}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+  const data = await request.json();
+  dispatch(createNewReservation(data));
+};
+
 const reservationsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_RESERVATIONS:
       return action.payload;
     case DELETE_RESERVATION:
       return state.filter((reservation) => reservation.id !== action.payload.id);
+    case ADD_RESERVATION:
+      return [...state, action.payload];
     default:
       return state;
   }

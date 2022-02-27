@@ -22,8 +22,7 @@ function Reservations() {
         {reservations.length === 0 ? (<div className="no-reservations">You have no rented cars yet!</div>)
           : (
             <h2 className="reservation-notice">
-              You are able to cancel the reservation before 24 hours of the
-              reservation date
+              Cancel your reservation before 24h
             </h2>
           )}
         { reservations.map((reservation) => (
