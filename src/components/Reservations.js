@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { loadCars } from '../redux/cars/cars';
 import { getReservations } from '../redux/reservations/reservationsReducer';
 import ReservationCard from './ReservationCard';
 import './Reservations.css';
 
 function Reservations() {
   const dispatch = useDispatch();
-  const allReservations = useSelector((state) => state.reservationsReducer);
-
+  const reservations = useSelector((state) => state.reservationsReducer);
+  const cars = useSelector((state) => state.carsReducer);
   const user = useSelector((state) => state.userReducer);
 
-  const reservations = allReservations.filter((reservation) => reservation.username === user);
-
   useEffect(() => {
-    dispatch(getReservations());
-  }, [dispatch]);
+    dispatch(getReservations(user));
+    dispatch(loadCars());
+  }, []);
   return (
     <>
       <h1 className="myreservations-title">My Reservations</h1>
       <ul className="reservations-container">
-        {reservations.length === 0 ? (<div className="no-reservations">You have rented cars yet!</div>)
+        {reservations.length === 0 ? (<div className="no-reservations">You have no rented cars yet!</div>)
           : (
             <h2 className="reservation-notice">
               You are able to cancel the reservation before 24 hours of the
@@ -27,7 +27,13 @@ function Reservations() {
             </h2>
           )}
         { reservations.map((reservation) => (
-          <ReservationCard key={reservation.id} reservation={reservation} />))}
+
+          <ReservationCard
+            key={reservation.id}
+            reservation={reservation}
+            reservedCar={cars.filter((car) => car.id === reservation.car_id)}
+          />
+        ))}
       </ul>
     </>
   );

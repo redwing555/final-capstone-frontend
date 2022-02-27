@@ -64,4 +64,11 @@
     height: 10rem;
     flex-direction: column;
   }
+
+  .no-reservations {
+    margin-left: 0rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+  }
+
 }

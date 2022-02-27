@@ -1,21 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { deleteReservation } from '../redux/reservations/reservationsReducer';
 import './ReservationCard.css';
 
 function ReservationCard(props) {
   const dispatch = useDispatch();
-  const { reservation } = props;
-
-  const cars = useSelector((state) => state.carsReducer);
-  const user = useSelector((state) => state.userReducer);
-  const reservedCar = cars
-    .filter((car) => car.id === reservation.car_id && reservation.username === user);
+  const { reservation, reservedCar } = props;
 
   const handleDelete = (id) => {
     dispatch(deleteReservation(id));
     window.location.reload(false);
   };
+  reservation.reservation_date = reservation.reservation_date.substr(0, 10);
 
   const datediff = (from, to) => Math.floor((Date.parse(to) - Date.parse(from)) / 86400000);
   const chars = 'A1B2C3D4E5F6G7H8J9K0MNPQRSTUXY';
@@ -50,48 +46,49 @@ function ReservationCard(props) {
           <div className="dates">
             Pick-up :
             {' '}
-            {reservation.fromDate}
+            {reservation.reservation_date}
           </div>
           <div className="dates">
             Drop-off :
             {' '}
-            {reservation.toDate}
+            {reservation.to_date}
           </div>
           <div className="dates">
             Number of days :
             {' '}
-            {datediff(reservation.fromDate, reservation.toDate)}
+            {datediff(reservation.reservation_date, reservation.to_date)}
             {}
           </div>
 
         </div>
-        <img className="car-image" src={`${reservedCar[0].image}`} alt="" />
+        <img className="car-image" src={`${reservedCar[0] && reservedCar[0].image}`} alt="" />
         <div className="reservation-car-details">
           <div>
             Car brand :
             {' '}
-            {reservedCar[0].brand}
+            {reservedCar[0] && reservedCar[0].brand}
           </div>
           <div>
             Car Model :
             {' '}
-            {reservedCar[0].model}
+            {reservedCar[0] && reservedCar[0].model}
           </div>
 
-          {reservedCar[0].description && (
+          {reservedCar[0] && (reservedCar[0].description && (
           <div>
             description :
             {' '}
             {' '}
             {reservedCar[0].description}
           </div>
-          )}
+          ))}
 
           <div>
             Total rent price ($) :
             {' '}
-            {parseInt(reservedCar[0].price, 10)
-             * datediff(reservation.fromDate, reservation.toDate)}
+            {reservedCar[0] && parseInt(reservedCar[0].price, 10)
+             * datediff(reservation.reservation_date, reservation.to_date)}
+
           </div>
 
           <button onClick={() => handleDelete(reservation.id)} className="cancel-button" type="button">Cancel</button>
@@ -107,15 +104,17 @@ function ReservationCard(props) {
 ReservationCard.propTypes = {
   reservation: propTypes.shape({
     id: propTypes.number.isRequired,
-    fromDate: propTypes.string.isRequired,
-    toDate: propTypes.string.isRequired,
+    reservation_date: propTypes.string.isRequired,
+    to_date: propTypes.string.isRequired,
     username: propTypes.string.isRequired,
     car_id: propTypes.number,
   }),
+  reservedCar: propTypes.instanceOf(Array),
 };
 
 ReservationCard.defaultProps = {
   reservation: {},
+  reservedCar: [],
 };
 
 export default ReservationCard;

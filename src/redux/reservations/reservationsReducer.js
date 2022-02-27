@@ -1,11 +1,13 @@
+import axios from 'axios';
+
 const GET_RESERVATIONS = 'reservations/GET_RESERVATIONS';
 const DELETE_RESERVATION = 'reservations/DELETE_RESERVATIONS';
 const initialState = [];
 
-const getAllReservations = (payload) => ({
-  type: GET_RESERVATIONS,
-  payload,
-});
+// const getAllReservations = (payload) => ({
+//   type: GET_RESERVATIONS,
+//   payload,
+// });
 
 export const cancelReservation = (payload) => ({
   type: DELETE_RESERVATION,
@@ -13,7 +15,7 @@ export const cancelReservation = (payload) => ({
 });
 
 export const deleteReservation = (id) => async (dispatch) => {
-  await fetch(`http://localhost:5000/reservations/${id}`, {
+  await fetch(`http://localhost:3000//api/v1/reservations/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -22,10 +24,13 @@ export const deleteReservation = (id) => async (dispatch) => {
   dispatch(cancelReservation(id));
 };
 
-export const getReservations = () => async (dispatch) => {
-  const request = await fetch('http://localhost:5000/reservations');
-  const data = await request.json();
-  dispatch(getAllReservations(data));
+export const getReservations = (user) => async (dispatch) => {
+  axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+  const { data } = await axios.get('http://localhost:3000//api/v1/reservations', { params: { username: user } });
+  dispatch({
+    type: GET_RESERVATIONS,
+    payload: data,
+  });
 };
 
 const reservationsReducer = (state = initialState, action) => {
