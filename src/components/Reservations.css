@@ -66,9 +66,8 @@
   }
 
   .no-reservations {
-    margin-left: 0rem;
+    margin-left: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
   }
-
 }
