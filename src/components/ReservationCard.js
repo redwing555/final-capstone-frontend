@@ -12,6 +12,8 @@ function ReservationCard(props) {
     window.location.reload(false);
   };
   reservation.reservation_date = reservation.reservation_date.substr(0, 10);
+  reservation.to_date = new Date(reservation.to_date).toISOString().split('T').toString()
+    .substr(0, 10);
 
   const datediff = (from, to) => Math.floor((Date.parse(to) - Date.parse(from)) / 86400000);
   const chars = 'A1B2C3D4E5F6G7H8J9K0MNPQRSTUXY';
@@ -34,6 +36,11 @@ function ReservationCard(props) {
           {reservation.username.toUpperCase()}
           {' '}
           your car has been reserved!
+        </div>
+        <div className="reserve-id">
+          City:
+          {' '}
+          {reservation.city}
         </div>
         <div className="reserve-id">
           Reservation  ID :
@@ -108,6 +115,7 @@ ReservationCard.propTypes = {
     to_date: propTypes.string.isRequired,
     username: propTypes.string.isRequired,
     car_id: propTypes.number,
+    city: propTypes.string,
   }),
   reservedCar: propTypes.instanceOf(Array),
 };

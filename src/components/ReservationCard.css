@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .reservation-card {
-  margin-left: 15rem;
+  margin-left: 20rem;
   padding: 1rem;
   font-family: 'Roboto', sans-serif;
   box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
