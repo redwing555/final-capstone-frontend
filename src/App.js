@@ -8,6 +8,7 @@ import NavPanel from './components/NavPanel';
 import AddCar from './components/AddCar';
 import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
+import ItemDetails from './components/ItemDetails';
 import RemoveCar from './components/RemoveCar';
 
 const App = () => (
@@ -60,17 +61,16 @@ const App = () => (
             <DisplayItems />
           </AuthComponent>
           )}
-      >
-        <Route
-          path=":id"
-          element={(
-            <AuthComponent>
-              <NavPanel />
-              <DisplayItems />
-            </AuthComponent>
+      />
+      <Route
+        path="collection/:id"
+        element={(
+          <AuthComponent>
+            <NavPanel />
+            <ItemDetails />
+          </AuthComponent>
               )}
-        />
-      </Route>
+      />
     </Routes>
   </Router>
 );
