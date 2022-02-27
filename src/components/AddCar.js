@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import CarFormInput from './CarFormInput';
 import { createCar } from '../redux/cars/cars';
@@ -7,7 +7,7 @@ import './AddCar.css';
 
 function AddCar() {
   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     price: '',
     brand: '',
@@ -67,6 +67,7 @@ function AddCar() {
     dispatch(createCar(values));
     setTimeout(() => {
       window.location.reload(true);
+      navigate('/collection');
     }, 1000);
   };
 

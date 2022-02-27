@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
-// import { useSelector } from 'react-redux';
 import AuthComponent from './components/AuthComponent';
 import NavPanel from './components/NavPanel';
 import AddCar from './components/AddCar';
@@ -10,10 +9,9 @@ import Homepage from './components/Homepage';
 import DisplayItems from './components/DisplayItems';
 import ItemDetails from './components/ItemDetails';
 import RemoveCar from './components/RemoveCar';
+import Reservations from './components/Reservations';
 
 const App = () => (
-  // const user  = userSelector((state) => state.userReducer)
-
   <Router>
     <Routes>
       <Route path="/" element={<Homepage />} />
@@ -40,7 +38,7 @@ const App = () => (
         element={(
           <AuthComponent>
             <NavPanel />
-            <DisplayItems />
+            <Reservations />
           </AuthComponent>
           )}
       />
@@ -74,5 +72,4 @@ const App = () => (
     </Routes>
   </Router>
 );
-
 export default App;
