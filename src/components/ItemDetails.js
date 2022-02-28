@@ -9,7 +9,7 @@ const ItemDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const id = Number(location.pathname.split('/')[2]);
-  const car = carList.filter((c) => c.id !== id)[0];
+  const car = carList.filter((c) => c.id === id)[0];
   const reserveHandle = () => {
     navigate('/reserve');
   };
