@@ -79,7 +79,7 @@ describe('Test display items', () => {
   });
   test('If component rendered correctly', () => {
     expect(screen.getByText('My Reservations')).toBeInTheDocument();
-    expect(screen.getByText('You are able to cancel the reservation before 24 hours of the reservation date')).toBeInTheDocument();
+    expect(screen.getByText('Cancel your reservation before 24h')).toBeInTheDocument();
   });
   test('If the component show the reservations from store', () => {
     expect(screen.getByText(/2022-02-27/)).toBeInTheDocument();
