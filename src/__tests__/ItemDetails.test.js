@@ -47,7 +47,7 @@ describe('Test display items', () => {
   beforeEach(() => {
     useDispatchMock.mockImplementation(() => () => {});
     useSelectorMock.mockImplementation((selector) => selector(mockStore));
-    renderWithRouter(<ItemDetails />, {route: "/collection/2"});
+    renderWithRouter(<ItemDetails />, { route: '/collection/2' });
   });
   afterEach(() => {
     useDispatchMock.mockClear();

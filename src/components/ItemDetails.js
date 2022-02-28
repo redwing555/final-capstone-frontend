@@ -53,7 +53,7 @@ const ItemDetails = () => {
         </div>
       </section>
       <div className="back-button-container">
-        <button data-testid='back button' type="button" onClick={backHandle} className="back-button">
+        <button data-testid="back button" type="button" onClick={backHandle} className="back-button">
           ‎
           <i className="far fa-caret-left" />
         </button>
