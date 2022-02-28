@@ -61,6 +61,6 @@ describe('Test display items', () => {
     expect(screen.getByText(/Ferrari/)).toBeInTheDocument();
   });
   test('if the submit button exists', () => {
-    expect(screen.getByText('Submit')).toBeInTheDocument
-  })
+    expect(screen.getByText('Submit')).toBeInTheDocument();
+  });
 });
