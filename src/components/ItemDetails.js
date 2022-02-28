@@ -24,22 +24,24 @@ const ItemDetails = () => {
         </div>
         <div className="info-container">
           <table className="details-info">
-            <tr>
-              <td><p>Brand:</p></td>
-              <td><p className="end">{car.brand}</p></td>
-            </tr>
-            <tr>
-              <td><p>Model: </p></td>
-              <td><p className="end">{car.model}</p></td>
-            </tr>
-            <tr>
-              <td><p>Reservation Price:</p></td>
-              <td><p className="end">{car.price}</p></td>
-            </tr>
-            <tr>
-              <td><p>Id:</p></td>
-              <td><p className="end">{car.id}</p></td>
-            </tr>
+            <tbody>
+              <tr>
+                <td><p>Brand:</p></td>
+                <td><p className="end">{car.brand}</p></td>
+              </tr>
+              <tr>
+                <td><p>Model: </p></td>
+                <td><p className="end">{car.model}</p></td>
+              </tr>
+              <tr>
+                <td><p>Reservation Price:</p></td>
+                <td><p className="end">{car.price}</p></td>
+              </tr>
+              <tr>
+                <td><p>Id:</p></td>
+                <td><p className="end">{car.id}</p></td>
+              </tr>
+            </tbody>
           </table>
           <button type="button" onClick={reserveHandle}>
             <i className="fa fa-solid fa-cog" />
@@ -51,7 +53,7 @@ const ItemDetails = () => {
         </div>
       </section>
       <div className="back-button-container">
-        <button type="button" onClick={backHandle} className="back-button">
+        <button data-testid='back button' type="button" onClick={backHandle} className="back-button">
           ‎
           <i className="far fa-caret-left" />
         </button>
