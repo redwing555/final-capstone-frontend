@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { deleteReservation } from '../redux/reservations/reservationsReducer';
-import './ReservationCard.css';
+import '../assets/styles/ReservationCard.css';
 
 function ReservationCard(props) {
   const dispatch = useDispatch();

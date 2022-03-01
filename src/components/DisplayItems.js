@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadCars } from '../redux/cars/cars';
-
 import '../assets/styles/DisplayItems.css';
 
 const DisplayItems = () => {
