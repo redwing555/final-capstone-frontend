@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 h4 {
   color: white;
 }
@@ -15,6 +17,7 @@ select {
 }
 
 .reserve-form {
+  font-family: 'Roboto', sans-serif;
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   padding: 5rem;
@@ -24,7 +27,7 @@ select {
   gap: 1.5rem;
   border-radius: 5%;
   width: 50rem;
-  margin-left: 5rem;
+  margin-left: 10rem;
   height: 45rem;
 }
 
@@ -59,7 +62,7 @@ select {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   #city {
     margin-left: 0.1rem !important;
   }
@@ -77,11 +80,11 @@ select {
     border-radius: 4% !important;
     z-index: 1;
     width: 19rem;
-    height: 35rem;
+    height: 40rem;
     padding-left: 4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-right: 5rem;
+    margin-left: 4rem;
     margin-top: 5rem;
     gap: 1.5rem;
     margin-bottom: 1rem;
@@ -96,7 +99,7 @@ select {
   }
 
   .reserve-form .submit {
-    margin-right: 1rem !important;
+    margin-left: -2rem !important;
   }
 
   .reserve-form input {

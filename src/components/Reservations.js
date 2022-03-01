@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadCars } from '../redux/cars/cars';
 import { getReservations } from '../redux/reservations/reservationsReducer';
 import ReservationCard from './ReservationCard';
-import './Reservations.css';
+import '../assets/styles/Reservations.css';
 
 function Reservations() {
   const dispatch = useDispatch();

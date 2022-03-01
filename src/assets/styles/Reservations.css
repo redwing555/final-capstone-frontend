@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .reservations-container {
@@ -16,12 +18,12 @@ body {
 }
 
 .myreservations-title {
-  margin-left: 50rem;
+  margin-left: 40rem;
   padding-top: 5rem;
 }
 
 .reservation-notice {
-  margin-left: 43rem;
+  margin-left: 33rem;
   animation: color-change 1s infinite;
 }
 
@@ -37,7 +39,7 @@ body {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .reservations-container {
     scroll-behavior: auto;
   }

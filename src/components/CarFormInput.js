@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CarFormInput.css';
+import '../assets/styles/CarFormInput.css';
 import propTypes from 'prop-types';
 
 function CarFormInput(props) {

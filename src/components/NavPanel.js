@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './NavPanel.css';
-import logo from './logo.png';
+import '../assets/styles/NavPanel.css';
+import logo from '../assets/images/logo.png';
 
 const NavPanel = () => {
   const [responsive, setResponsive] = useState(false);

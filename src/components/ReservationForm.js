@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './ReservationForm.css';
+import '../assets/styles/ReservationForm.css';
 import { createReservation } from '../redux/reservations/reservationsReducer';
 import { loadCars } from '../redux/cars/cars';
 
@@ -35,7 +35,7 @@ function ReservationForm() {
 
       <form className="reserve-form" onSubmit={(e) => handleSubmit(e)}>
         <h1>Make your reservation</h1>
-
+        <h4 className="date-label">Select Car</h4>
         <select className="formInput" id="selectDropdown">
           {carList.map((car, index) => (
             <option className="select-values" key={car.id} value={index}>

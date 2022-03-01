@@ -41,7 +41,9 @@
 }
 
 .logo {
-  transform: scale(0.7);
+  transform: scale(0.9);
+  margin-left: -1rem;
+  margin-top: 1rem;
 }
 
 .sidebar li:hover .link {
@@ -52,10 +54,15 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .sidebar {
     display: none;
   }
+
+  .sidebar li {
+    padding: 20px;
+  }
+
 
   .sidebar li:hover {
     background-color: #99c110;
@@ -71,9 +78,9 @@
   }
 
   .logo {
-    transform: scale(0.6);
-    margin-left: 3rem;
-    margin-top: -2rem;
+    transform: scale(1.1);
+    margin-left: 2rem;
+    margin-top: 4rem;
   }
 
   .responsive {
@@ -96,7 +103,7 @@
 
   .icon .fa {
     margin: 1rem;
-    transform: scale(2);
+    transform: scale(2.5);
     color: #99c110;
   }
 }

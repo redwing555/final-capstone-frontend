@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import CarFormInput from './CarFormInput';
 import { createCar } from '../redux/cars/cars';
-import './AddCar.css';
+import '../assets/styles/AddCar.css';
 
 function AddCar() {
   const dispatch = useDispatch();

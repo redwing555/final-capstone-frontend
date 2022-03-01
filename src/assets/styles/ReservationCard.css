@@ -16,6 +16,7 @@
   height: 3rem;
   padding: 1rem;
   margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .car-image {
@@ -24,6 +25,7 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
   border-radius: 5%;
   margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 .cancel-button {
@@ -34,7 +36,7 @@
   border: none;
   height: 2rem;
   width: 5rem;
-  margin-left: 6rem;
+  margin-left: 2rem;
   cursor: pointer;
 }
 
@@ -63,10 +65,14 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .reservation-card {
     margin-left: -1rem;
     width: 17rem;
+  }
+
+  .car-image {
+    margin-left: 0.08rem;
   }
 
   .reserve-id {
