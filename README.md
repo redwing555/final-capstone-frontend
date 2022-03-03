@@ -75,6 +75,10 @@ Give a ⭐️ if you like this project!
 
 - [Murat Korkmaz](https://www.behance.net/muratk) for the [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
+## Kanban Board
+
+- https://github.com/redwing555/final-capstone-frontend/projects/1
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.

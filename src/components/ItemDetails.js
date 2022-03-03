@@ -44,11 +44,7 @@ const ItemDetails = () => {
             </tbody>
           </table>
           <button type="button" onClick={reserveHandle}>
-            <i className="fa fa-solid fa-cog" />
-            {' '}
             Reserve
-            {' '}
-            <i className="far fa-arrow-circle-right" />
           </button>
         </div>
       </section>
