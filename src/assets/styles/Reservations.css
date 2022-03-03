@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.reservations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 2.5rem;
+  margin-right: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.myreservations-title {
+  margin-left: 40rem;
+  padding-top: 5rem;
+}
+
+.reservation-notice {
+  margin-left: 33rem;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: black; }
+  100% { color: red; }
+}
+
+.no-reservations {
+  margin-left: 45rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .reservations-container {
+    scroll-behavior: auto;
+  }
+
+  .myreservations-title {
+    margin-left: 2rem;
+    padding-top: 5rem;
+  }
+
+  .reservation-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reservation-notice {
+    margin-left: -4.5rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    animation: marquee 3s linear infinite;
+    padding-top: 0;
+    margin-top: -3rem;
+    color: red;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate(10%, 0);
+      transform: scale(0.6);
+    }
+
+    100% {
+      transform: translate(-10%, 0);
+      transform: scale(0.7);
+    }
+  }
+
+  .reservation-header {
+    height: 10rem;
+    flex-direction: column;
+  }
+
+  .no-reservations {
+    margin-left: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+  }
+}

@@ -1,56 +1,65 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Final-Capstone Front-End
 
-> Description the project.
+> This is the front end of Microverse's final capstone
 
+## Screenshot
+
+![screenshot](screenshot.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- React
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- npm
+
 ### Setup
+
+- Make sure you have npm set up
 
 ### Install
 
+- Run npm i
+
 ### Usage
 
-### Run tests
+- Run npm run start
+
+### Tests
+
+- Run npm test
 
 ### Deployment
 
+- The front-end can be deployed following the get started section on netlify
 
+## Author
 
-## Authors
+👤 **Leonardo Paz**
 
-👤 **Author1**
+- Github: [Leonardo Paz](https://github.com/leolpaz)
+- Linkedin: [Leonardo Paz](https://www.linkedin.com/in/leonardolpaz/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Hichami Houssam**
 
-👤 **Author2**
+- GitHub: [@redwing555](https://github.com/redwing555/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Isai Cespedes**
+
+- GitHub: [@Lordkaito_](https://github.com/Lordkaito)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/isaicespedes)
+
+👤 **Cyril Iyadi**
+
+- GitHub: [@see-why](https://github.com/see-why)
+- LinkedIn: [C.Iyadi](https://www.linkedin.com/in/cyril-iyadi/)
 
 ## 🤝 Contributing
 
@@ -64,9 +73,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Murat Korkmaz](https://www.behance.net/muratk) for the [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 ## 📝 License
 
