@@ -3,7 +3,7 @@ import axios from 'axios';
 const GET_RESERVATIONS = 'reservations/GET_RESERVATIONS';
 const DELETE_RESERVATION = 'reservations/DELETE_RESERVATIONS';
 const ADD_RESERVATION = 'reservation/ADD_RESERVATION';
-const API_URL = 'http://localhost:3000/';
+const API_URL = 'https://afternoon-harbor-85228.herokuapp.com/';
 const END_POINT = 'api/v1/reservations';
 
 const initialState = [];
