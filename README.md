@@ -13,6 +13,13 @@
 
 - [Click Here!](https://classico-afternoon-heroku.herokuapp.com/)
 
+
+## Rails backend
+
+- [rails back-end repository ](https://github.com/Lordkaito/final-capstone-backend)
+
+- [API documentation ](https://github.com/Lordkaito/final-capstone-backend)
+
 ## Built With
 
 - React
@@ -85,10 +92,10 @@ Give a ⭐️ if you like this project!
 Here you will see some images of our Kanban boards at the beggining of the project.
 
 Back-end kanban:
-[Kanban board image](kanban-bakend.jpg)
+[Kanban board image](https://github.com/redwing555/final-capstone-frontend/blob/dev/kanban-backend.jpg)
 
 Front-end kanban:
-[Front end kanban image](./readme-images/154284589-84507a90-e972-435d-b50d-5f659255ac34.png)
+[Front end kanban image](https://github.com/redwing555/final-capstone-frontend/blob/dev/kanban-frontend.png)
 
 And this is the current link to the kanban board:
 [Kanban Board Link](https://github.com/redwing555/final-capstone-frontend/projects/1)
