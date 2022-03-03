@@ -85,7 +85,7 @@ Give a ⭐️ if you like this project!
 Here you will see some images of our Kanban boards at the beggining of the project.
 
 Back-end kanban:
-[Kanban board image](./readme-images/154285321-34ae9394-876a-46c3-b42a-cb27dabbbf6e.jpg)
+[Kanban board image](kanban-bakend.jpg)
 
 Front-end kanban:
 [Front end kanban image](./readme-images/154284589-84507a90-e972-435d-b50d-5f659255ac34.png)
