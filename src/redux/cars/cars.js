@@ -3,7 +3,7 @@ import axios from 'axios';
 const LOAD_CARS = 'redux-load-cars';
 const ADD_CAR = 'cars/ADD_CAR';
 const DELETE_CAR = 'cars/DELETE_CAR';
-const API_URL = 'http://localhost:3000/';
+const API_URL = 'https://afternoon-harbor-85228.herokuapp.com/';
 const END_POINT = 'api/v1/cars';
 
 const initialState = [];
